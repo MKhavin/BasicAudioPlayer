@@ -54,7 +54,7 @@ extension ViewController {
         let titleValue = metadataList.first { value in
             value.commonKey == .commonKeyTitle
         }
-        musicTitleLabel.text = titleValue?.stringValue ?? "Queen"
+        musicTitleLabel.text = titleValue?.stringValue ?? url.lastPathComponent.components(separatedBy: ".")[0].capitalized
     }
 }
 //MARK: - Actions
@@ -63,6 +63,8 @@ extension ViewController {
     }
     
     @IBAction func forwardButtonPressed(_ sender: UIButton) {
+//        player = getAudioPlayer(for: "spacecadet")
+//        setTitle(of: player.url)
     }
     
     @IBAction func playButtonPressed(_ sender: Any) {

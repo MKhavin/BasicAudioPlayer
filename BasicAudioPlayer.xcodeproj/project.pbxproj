@@ -14,6 +14,11 @@
 		5122364D288F3D1F00CE646F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5122364B288F3D1F00CE646F /* LaunchScreen.storyboard */; };
 		51223657288F3D6000CE646F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 51223656288F3D6000CE646F /* Main.storyboard */; };
 		51223659288F3F3700CE646F /* Queen.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 51223658288F3F3700CE646F /* Queen.mp3 */; };
+		51C7A8FB28909FF6003FC381 /* unkown.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 51C7A8F628909FF6003FC381 /* unkown.mp3 */; };
+		51C7A8FC28909FF6003FC381 /* keraunos.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 51C7A8F728909FF6003FC381 /* keraunos.mp3 */; };
+		51C7A8FD28909FF6003FC381 /* Murder in my mind.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 51C7A8F828909FF6003FC381 /* Murder in my mind.mp3 */; };
+		51C7A8FE28909FF6003FC381 /* mareux.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 51C7A8F928909FF6003FC381 /* mareux.mp3 */; };
+		51C7A8FF28909FF6003FC381 /* spacecadet.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 51C7A8FA28909FF6003FC381 /* spacecadet.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +31,11 @@
 		5122364E288F3D1F00CE646F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		51223656288F3D6000CE646F /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		51223658288F3F3700CE646F /* Queen.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Queen.mp3; sourceTree = "<group>"; };
+		51C7A8F628909FF6003FC381 /* unkown.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = unkown.mp3; sourceTree = "<group>"; };
+		51C7A8F728909FF6003FC381 /* keraunos.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = keraunos.mp3; sourceTree = "<group>"; };
+		51C7A8F828909FF6003FC381 /* Murder in my mind.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Murder in my mind.mp3"; sourceTree = "<group>"; };
+		51C7A8F928909FF6003FC381 /* mareux.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = mareux.mp3; sourceTree = "<group>"; };
+		51C7A8FA28909FF6003FC381 /* spacecadet.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = spacecadet.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +85,11 @@
 			isa = PBXGroup;
 			children = (
 				51223658288F3F3700CE646F /* Queen.mp3 */,
+				51C7A8F728909FF6003FC381 /* keraunos.mp3 */,
+				51C7A8F928909FF6003FC381 /* mareux.mp3 */,
+				51C7A8F828909FF6003FC381 /* Murder in my mind.mp3 */,
+				51C7A8FA28909FF6003FC381 /* spacecadet.mp3 */,
+				51C7A8F628909FF6003FC381 /* unkown.mp3 */,
 			);
 			path = Music;
 			sourceTree = "<group>";
@@ -161,8 +176,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				5122364D288F3D1F00CE646F /* LaunchScreen.storyboard in Resources */,
+				51C7A8FD28909FF6003FC381 /* Murder in my mind.mp3 in Resources */,
+				51C7A8FE28909FF6003FC381 /* mareux.mp3 in Resources */,
+				51C7A8FB28909FF6003FC381 /* unkown.mp3 in Resources */,
 				51223659288F3F3700CE646F /* Queen.mp3 in Resources */,
+				51C7A8FF28909FF6003FC381 /* spacecadet.mp3 in Resources */,
 				5122364A288F3D1F00CE646F /* Assets.xcassets in Resources */,
+				51C7A8FC28909FF6003FC381 /* keraunos.mp3 in Resources */,
 				51223657288F3D6000CE646F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
