@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="5Vg-eD-n46">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Video Player-->
+        <scene sceneID="5X8-0T-Gfn">
+            <objects>
+                <tabBarController title="Video Player" id="5Vg-eD-n46" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="n3g-PA-ex7">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="selectedImageTintColor" systemColor="labelColor"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="IIb-pT-86q"/>
+                        <segue destination="ZfI-BS-nsE" kind="relationship" relationship="viewControllers" id="twQ-Nc-vke"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZBh-nc-xiH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-816" y="88"/>
+        </scene>
+        <!--Video player-->
+        <scene sceneID="KAs-Ug-HLt">
+            <objects>
+                <viewController id="ZfI-BS-nsE" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4b5-hr-7xl">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="bsp-PW-2Gr">
+                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="VideoCell" id="t5k-OX-csx">
+                                        <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="t5k-OX-csx" id="fes-AJ-EmN">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="fLK-X3-1B0"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="bsp-PW-2Gr" firstAttribute="leading" secondItem="fLK-X3-1B0" secondAttribute="leading" id="7nR-c5-r1C"/>
+                            <constraint firstItem="fLK-X3-1B0" firstAttribute="bottom" secondItem="bsp-PW-2Gr" secondAttribute="bottom" id="WZP-WP-0rr"/>
+                            <constraint firstItem="fLK-X3-1B0" firstAttribute="trailing" secondItem="bsp-PW-2Gr" secondAttribute="trailing" id="Yrp-Ab-AJE"/>
+                            <constraint firstItem="bsp-PW-2Gr" firstAttribute="top" secondItem="fLK-X3-1B0" secondAttribute="top" id="xtk-Ph-tnR"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Video player" image="play.rectangle" catalog="system" id="Swm-FY-yUd"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="64n-nM-8h9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="123" y="467"/>
+        </scene>
+        <!--Music player-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController title="Music player" id="BYZ-38-t0r" customClass="ViewController" customModule="BasicAudioPlayer" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="xuk-8O-2Rt">
+                                <rect key="frame" x="10" y="54" width="394" height="749"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yhj-a6-CbW">
+                                        <rect key="frame" x="0.0" y="0.0" width="394" height="649"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="SJL-lx-94L">
+                                        <rect key="frame" x="0.0" y="649" width="394" height="100"/>
+                                        <subviews>
+                                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="5Kx-Q8-WVO">
+                                                <rect key="frame" x="-2" y="0.0" width="398" height="27.5"/>
+                                                <color key="tintColor" systemColor="labelColor"/>
+                                                <connections>
+                                                    <action selector="sliderValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="MOV-wL-HHF"/>
+                                                </connections>
+                                            </slider>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="bHe-03-Bcy">
+                                                <rect key="frame" x="0.0" y="36.5" width="394" height="27"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8sR-FB-4Ec">
+                                                        <rect key="frame" x="0.0" y="0.0" width="131.5" height="27"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                                        <color key="tintColor" systemColor="labelColor"/>
+                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                        <state key="normal" image="backward.fill" catalog="system"/>
+                                                        <connections>
+                                                            <action selector="backwardButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wRl-Lg-xfA"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bLh-VW-nOW">
+                                                        <rect key="frame" x="131.5" y="0.0" width="131" height="27"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                                        <color key="tintColor" systemColor="labelColor"/>
+                                                        <state key="normal" image="playpause.fill" catalog="system"/>
+                                                        <connections>
+                                                            <action selector="playButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oBC-Lr-Leq"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o4o-Qp-r2F">
+                                                        <rect key="frame" x="262.5" y="0.0" width="131.5" height="27"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                                        <color key="tintColor" systemColor="labelColor"/>
+                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                        <state key="normal" image="forward.fill" catalog="system"/>
+                                                        <connections>
+                                                            <action selector="forwardButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bRj-Vq-AYT"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jzv-MR-GKZ">
+                                                <rect key="frame" x="0.0" y="73.5" width="394" height="26.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                                <color key="tintColor" systemColor="labelColor"/>
+                                                <state key="normal" image="stop.fill" catalog="system"/>
+                                                <connections>
+                                                    <action selector="stopButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ver-dQ-xQo"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="100" id="nyd-FP-jeg"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="xuk-8O-2Rt" secondAttribute="trailing" constant="10" id="1LF-9d-qHq"/>
+                            <constraint firstItem="xuk-8O-2Rt" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="4ru-tU-jcd"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="xuk-8O-2Rt" secondAttribute="bottom" constant="10" id="S3y-63-tBq"/>
+                            <constraint firstItem="xuk-8O-2Rt" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="xYc-8R-h9F"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Music player" image="music.note" catalog="system" id="y31-tS-Ihl"/>
+                    <connections>
+                        <outlet property="musicTitleLabel" destination="Yhj-a6-CbW" id="PfN-Nz-FdU"/>
+                        <outlet property="sliderView" destination="5Kx-Q8-WVO" id="ua4-46-GHW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="106" y="-285"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="backward.fill" catalog="system" width="128" height="79"/>
+        <image name="forward.fill" catalog="system" width="128" height="79"/>
+        <image name="music.note" catalog="system" width="97" height="128"/>
+        <image name="play.rectangle" catalog="system" width="128" height="93"/>
+        <image name="playpause.fill" catalog="system" width="128" height="70"/>
+        <image name="stop.fill" catalog="system" width="128" height="113"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

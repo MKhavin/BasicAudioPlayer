@@ -1,10 +1,3 @@
-//
-//  AppDelegate.swift
-//  BasicAudioPlayer
-//
-//  Created by Michael Khavin on 26.07.2022.
-//
-
 import UIKit
 
 @main
