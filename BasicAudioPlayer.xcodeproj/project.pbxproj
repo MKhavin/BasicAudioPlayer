@@ -13,12 +13,8 @@
 		5122364A288F3D1F00CE646F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 51223649288F3D1F00CE646F /* Assets.xcassets */; };
 		5122364D288F3D1F00CE646F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5122364B288F3D1F00CE646F /* LaunchScreen.storyboard */; };
 		51223657288F3D6000CE646F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 51223656288F3D6000CE646F /* Main.storyboard */; };
-		51223659288F3F3700CE646F /* Queen.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 51223658288F3F3700CE646F /* Queen.mp3 */; };
-		51C7A8FB28909FF6003FC381 /* unkown.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 51C7A8F628909FF6003FC381 /* unkown.mp3 */; };
-		51C7A8FC28909FF6003FC381 /* keraunos.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 51C7A8F728909FF6003FC381 /* keraunos.mp3 */; };
-		51C7A8FD28909FF6003FC381 /* Murder in my mind.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 51C7A8F828909FF6003FC381 /* Murder in my mind.mp3 */; };
-		51C7A8FE28909FF6003FC381 /* mareux.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 51C7A8F928909FF6003FC381 /* mareux.mp3 */; };
-		51C7A8FF28909FF6003FC381 /* spacecadet.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 51C7A8FA28909FF6003FC381 /* spacecadet.mp3 */; };
+		514CFB0B289121A7005D445E /* AudioPlayerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 514CFB0A289121A7005D445E /* AudioPlayerManager.swift */; };
+		514CFB0D28912434005D445E /* Music in Resources */ = {isa = PBXBuildFile; fileRef = 514CFB0C28912434005D445E /* Music */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,12 +26,8 @@
 		5122364C288F3D1F00CE646F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5122364E288F3D1F00CE646F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		51223656288F3D6000CE646F /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
-		51223658288F3F3700CE646F /* Queen.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Queen.mp3; sourceTree = "<group>"; };
-		51C7A8F628909FF6003FC381 /* unkown.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = unkown.mp3; sourceTree = "<group>"; };
-		51C7A8F728909FF6003FC381 /* keraunos.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = keraunos.mp3; sourceTree = "<group>"; };
-		51C7A8F828909FF6003FC381 /* Murder in my mind.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Murder in my mind.mp3"; sourceTree = "<group>"; };
-		51C7A8F928909FF6003FC381 /* mareux.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = mareux.mp3; sourceTree = "<group>"; };
-		51C7A8FA28909FF6003FC381 /* spacecadet.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = spacecadet.mp3; sourceTree = "<group>"; };
+		514CFB0A289121A7005D445E /* AudioPlayerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioPlayerManager.swift; sourceTree = "<group>"; };
+		514CFB0C28912434005D445E /* Music */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Music; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,27 +68,15 @@
 				51223649288F3D1F00CE646F /* Assets.xcassets */,
 				5122364B288F3D1F00CE646F /* LaunchScreen.storyboard */,
 				5122364E288F3D1F00CE646F /* Info.plist */,
-				5122365A288F3F6200CE646F /* Music */,
+				514CFB0C28912434005D445E /* Music */,
 			);
 			path = BasicAudioPlayer;
-			sourceTree = "<group>";
-		};
-		5122365A288F3F6200CE646F /* Music */ = {
-			isa = PBXGroup;
-			children = (
-				51223658288F3F3700CE646F /* Queen.mp3 */,
-				51C7A8F728909FF6003FC381 /* keraunos.mp3 */,
-				51C7A8F928909FF6003FC381 /* mareux.mp3 */,
-				51C7A8F828909FF6003FC381 /* Murder in my mind.mp3 */,
-				51C7A8FA28909FF6003FC381 /* spacecadet.mp3 */,
-				51C7A8F628909FF6003FC381 /* unkown.mp3 */,
-			);
-			path = Music;
 			sourceTree = "<group>";
 		};
 		51C7A8F328909866003FC381 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				514CFB0A289121A7005D445E /* AudioPlayerManager.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -176,13 +156,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				5122364D288F3D1F00CE646F /* LaunchScreen.storyboard in Resources */,
-				51C7A8FD28909FF6003FC381 /* Murder in my mind.mp3 in Resources */,
-				51C7A8FE28909FF6003FC381 /* mareux.mp3 in Resources */,
-				51C7A8FB28909FF6003FC381 /* unkown.mp3 in Resources */,
-				51223659288F3F3700CE646F /* Queen.mp3 in Resources */,
-				51C7A8FF28909FF6003FC381 /* spacecadet.mp3 in Resources */,
 				5122364A288F3D1F00CE646F /* Assets.xcassets in Resources */,
-				51C7A8FC28909FF6003FC381 /* keraunos.mp3 in Resources */,
+				514CFB0D28912434005D445E /* Music in Resources */,
 				51223657288F3D6000CE646F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -195,6 +170,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				51223645288F3D1E00CE646F /* ViewController.swift in Sources */,
+				514CFB0B289121A7005D445E /* AudioPlayerManager.swift in Sources */,
 				51223641288F3D1E00CE646F /* AppDelegate.swift in Sources */,
 				51223643288F3D1E00CE646F /* SceneDelegate.swift in Sources */,
 			);
