@@ -15,6 +15,11 @@
 		51223657288F3D6000CE646F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 51223656288F3D6000CE646F /* Main.storyboard */; };
 		514CFB0B289121A7005D445E /* AudioPlayerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 514CFB0A289121A7005D445E /* AudioPlayerManager.swift */; };
 		514CFB0D28912434005D445E /* Music in Resources */ = {isa = PBXBuildFile; fileRef = 514CFB0C28912434005D445E /* Music */; };
+		5188FBDB2893AC6D00C78A78 /* VideoPlayerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5188FBDA2893AC6D00C78A78 /* VideoPlayerManager.swift */; };
+		5188FBDF2893BDAA00C78A78 /* VideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5188FBDE2893BDAA00C78A78 /* VideoViewController.swift */; };
+		5188FBE22893CD3F00C78A78 /* VideoDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5188FBE12893CD3F00C78A78 /* VideoDataModel.swift */; };
+		51C75FEC2891D8AA00A98551 /* VideoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51C75FEB2891D8AA00A98551 /* VideoListViewController.swift */; };
+		51C75FF02891DB4000A98551 /* VideoViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51C75FEF2891DB4000A98551 /* VideoViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +33,11 @@
 		51223656288F3D6000CE646F /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		514CFB0A289121A7005D445E /* AudioPlayerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioPlayerManager.swift; sourceTree = "<group>"; };
 		514CFB0C28912434005D445E /* Music */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Music; sourceTree = "<group>"; };
+		5188FBDA2893AC6D00C78A78 /* VideoPlayerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPlayerManager.swift; sourceTree = "<group>"; };
+		5188FBDE2893BDAA00C78A78 /* VideoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoViewController.swift; sourceTree = "<group>"; };
+		5188FBE12893CD3F00C78A78 /* VideoDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoDataModel.swift; sourceTree = "<group>"; };
+		51C75FEB2891D8AA00A98551 /* VideoListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoListViewController.swift; sourceTree = "<group>"; };
+		51C75FEF2891DB4000A98551 /* VideoViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,10 +83,30 @@
 			path = BasicAudioPlayer;
 			sourceTree = "<group>";
 		};
+		51C75FED2891DB1D00A98551 /* AudioTab */ = {
+			isa = PBXGroup;
+			children = (
+				51223644288F3D1E00CE646F /* ViewController.swift */,
+			);
+			path = AudioTab;
+			sourceTree = "<group>";
+		};
+		51C75FEE2891DB2900A98551 /* VideoTab */ = {
+			isa = PBXGroup;
+			children = (
+				51C75FEB2891D8AA00A98551 /* VideoListViewController.swift */,
+				51C75FEF2891DB4000A98551 /* VideoViewCell.swift */,
+				5188FBDE2893BDAA00C78A78 /* VideoViewController.swift */,
+			);
+			path = VideoTab;
+			sourceTree = "<group>";
+		};
 		51C7A8F328909866003FC381 /* Model */ = {
 			isa = PBXGroup;
 			children = (
 				514CFB0A289121A7005D445E /* AudioPlayerManager.swift */,
+				5188FBDA2893AC6D00C78A78 /* VideoPlayerManager.swift */,
+				5188FBE12893CD3F00C78A78 /* VideoDataModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -92,7 +122,8 @@
 		51C7A8F528909871003FC381 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				51223644288F3D1E00CE646F /* ViewController.swift */,
+				51C75FEE2891DB2900A98551 /* VideoTab */,
+				51C75FED2891DB1D00A98551 /* AudioTab */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -169,10 +200,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5188FBE22893CD3F00C78A78 /* VideoDataModel.swift in Sources */,
+				51C75FF02891DB4000A98551 /* VideoViewCell.swift in Sources */,
 				51223645288F3D1E00CE646F /* ViewController.swift in Sources */,
+				5188FBDF2893BDAA00C78A78 /* VideoViewController.swift in Sources */,
 				514CFB0B289121A7005D445E /* AudioPlayerManager.swift in Sources */,
+				51C75FEC2891D8AA00A98551 /* VideoListViewController.swift in Sources */,
 				51223641288F3D1E00CE646F /* AppDelegate.swift in Sources */,
 				51223643288F3D1E00CE646F /* SceneDelegate.swift in Sources */,
+				5188FBDB2893AC6D00C78A78 /* VideoPlayerManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -317,7 +353,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -345,7 +381,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

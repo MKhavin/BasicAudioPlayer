@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Video Player-->
+        <!--Player-->
         <scene sceneID="5X8-0T-Gfn">
             <objects>
-                <tabBarController title="Video Player" id="5Vg-eD-n46" sceneMemberID="viewController">
+                <tabBarController title="Video Player" id="5Vg-eD-n46" userLabel="Player" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="n3g-PA-ex7">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -31,7 +31,7 @@
         <!--Video player-->
         <scene sceneID="KAs-Ug-HLt">
             <objects>
-                <viewController id="ZfI-BS-nsE" sceneMemberID="viewController">
+                <viewController id="ZfI-BS-nsE" customClass="VideoListViewController" customModule="BasicAudioPlayer" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4b5-hr-7xl">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -40,15 +40,50 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="769"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="VideoCell" id="t5k-OX-csx">
-                                        <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="VideoCell" id="t5k-OX-csx" customClass="VideoViewCell" customModule="BasicAudioPlayer" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="44.5" width="414" height="160.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="t5k-OX-csx" id="fes-AJ-EmN">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="160.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="pFl-OP-Zg4">
+                                                    <rect key="frame" x="5" y="5" width="404" height="150.5"/>
+                                                    <subviews>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="7Wv-Tk-n5l">
+                                                            <rect key="frame" x="0.0" y="0.0" width="150" height="150.5"/>
+                                                            <color key="tintColor" systemColor="labelColor"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="150" id="gCk-4p-vqk"/>
+                                                                <constraint firstAttribute="width" constant="150" id="rXW-zU-6WY"/>
+                                                            </constraints>
+                                                        </imageView>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FRu-PJ-b7L">
+                                                            <rect key="frame" x="170" y="0.0" width="234" height="150.5"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="pFl-OP-Zg4" secondAttribute="bottom" constant="5" id="9K1-4R-Two"/>
+                                                <constraint firstItem="pFl-OP-Zg4" firstAttribute="top" secondItem="fes-AJ-EmN" secondAttribute="top" constant="5" id="fh2-jy-3mr"/>
+                                                <constraint firstAttribute="trailing" secondItem="pFl-OP-Zg4" secondAttribute="trailing" constant="5" id="x82-DN-WTG"/>
+                                                <constraint firstItem="pFl-OP-Zg4" firstAttribute="leading" secondItem="fes-AJ-EmN" secondAttribute="leading" constant="5" id="ysU-bI-0vm"/>
+                                            </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="videoImageView" destination="7Wv-Tk-n5l" id="AxX-nI-9Q2"/>
+                                            <outlet property="videoTitleLabel" destination="FRu-PJ-b7L" id="bEv-zh-LGJ"/>
+                                            <segue destination="H9e-gs-QhC" kind="presentation" identifier="playVideo" id="pvg-nF-NBG"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="ZfI-BS-nsE" id="kuJ-KE-5Uz"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="fLK-X3-1B0"/>
@@ -61,10 +96,58 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Video player" image="play.rectangle" catalog="system" id="Swm-FY-yUd"/>
+                    <connections>
+                        <outlet property="videoListTableView" destination="bsp-PW-2Gr" id="ktW-hm-7Py"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="64n-nM-8h9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="123" y="467"/>
+        </scene>
+        <!--VideoViewController-->
+        <scene sceneID="lRo-AC-6yG">
+            <objects>
+                <viewController id="H9e-gs-QhC" userLabel="VideoViewController" customClass="VideoViewController" customModule="BasicAudioPlayer" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="vBF-cI-SdH">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8cc-Jt-uwV">
+                                <rect key="frame" x="0.0" y="104" width="414" height="738"/>
+                                <color key="backgroundColor" systemColor="labelColor"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fwn-1u-IKB">
+                                <rect key="frame" x="364" y="44.5" width="50" height="49"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="0DE-st-AZb"/>
+                                    <constraint firstAttribute="height" constant="50" id="vj6-p0-EXy"/>
+                                </constraints>
+                                <color key="tintColor" systemColor="labelColor"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" backgroundImage="xmark.circle.fill" catalog="system"/>
+                                <connections>
+                                    <action selector="closeButtonTouched:" destination="H9e-gs-QhC" eventType="touchUpInside" id="a5j-Qf-bkm"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="K6s-6A-SI1"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="K6s-6A-SI1" firstAttribute="bottom" secondItem="8cc-Jt-uwV" secondAttribute="bottom" id="7yX-vX-fG6"/>
+                            <constraint firstItem="fwn-1u-IKB" firstAttribute="top" secondItem="K6s-6A-SI1" secondAttribute="top" id="A2Y-yP-0J2"/>
+                            <constraint firstItem="K6s-6A-SI1" firstAttribute="trailing" secondItem="fwn-1u-IKB" secondAttribute="trailing" id="Ndd-8r-lRW"/>
+                            <constraint firstItem="8cc-Jt-uwV" firstAttribute="top" secondItem="fwn-1u-IKB" secondAttribute="bottom" constant="10" id="g2B-dW-XEh"/>
+                            <constraint firstItem="8cc-Jt-uwV" firstAttribute="leading" secondItem="K6s-6A-SI1" secondAttribute="leading" id="ixo-mD-Lsz"/>
+                            <constraint firstItem="8cc-Jt-uwV" firstAttribute="trailing" secondItem="K6s-6A-SI1" secondAttribute="trailing" id="xki-fX-qVZ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="videoView" destination="8cc-Jt-uwV" id="OEu-Za-rvu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ysA-ta-H2f" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1143" y="481"/>
         </scene>
         <!--Music player-->
         <scene sceneID="tne-QT-ifu">
@@ -171,6 +254,7 @@
         <image name="play.rectangle" catalog="system" width="128" height="93"/>
         <image name="playpause.fill" catalog="system" width="128" height="70"/>
         <image name="stop.fill" catalog="system" width="128" height="113"/>
+        <image name="xmark.circle.fill" catalog="system" width="128" height="121"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

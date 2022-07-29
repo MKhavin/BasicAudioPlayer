@@ -42,6 +42,7 @@ extension ViewController {
     
     @IBAction func sliderValueChanged(_ sender: UISlider) {
         audioPlayerManager.setCurrentTime(by: Double(sender.value))
+        audioPlayerManager.play()
     }
     
     @objc private func updateMusicProgress(_ sender: CADisplayLink) {
@@ -54,7 +55,7 @@ extension ViewController {
 //MARK: - AVAudioPlayerDelegate
 extension ViewController: AVAudioPlayerDelegate {
     func audioPlayerDidFinishPlaying(_ player: AVAudioPlayer, successfully flag: Bool) {
-        if flag {
+        if flag && player.currentTime == player.duration {
             displayLink.isPaused = true
             sliderView.setValue(0, animated: false)
         }
